@@ -27,7 +27,7 @@ async function fetchNumbersFromAPI(url) {
     });
     return res.data.numbers || [];
   } catch (err) {
-    console.error("❌ Error fetching numbers:", err.message);
+    console.error("Error fetching numbers:", err.message);
     return [];
   }
 }
@@ -67,6 +67,6 @@ app.get("/numbers/:numberid", async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`✅ Average Calculator running at http://localhost:${PORT}`);
+  console.log(`Running at http://localhost:${PORT}`);
 });
 
