@@ -37,7 +37,7 @@ app.get("/numbers/:numberid", async (req, res) => {
   const endpoint = API_MAP[numberid];
 
   if (!endpoint) {
-    return res.status(400).json({ error: "Invalid type. Use p, f, e, or r." });
+    return res.status(400).json({ error: "Invalid type." });
   }
 
   const windowPrevState = [...numberWindow];
